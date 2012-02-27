@@ -33,6 +33,10 @@ server {
 
 echo "Successfully created /etc/nginx/sites-available/$DOMAIN"
 
+echo "chown'ing the newly created domain directories"
+
+sudo chown -R root:www-data /srv/www/$DOMAIN/
+
 echo "Would you like to enable $DOMAIN? (yes or no)"
 
 read enableOpt

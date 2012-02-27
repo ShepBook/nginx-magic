@@ -32,6 +32,9 @@ server {
 
 echo "Successfully created /etc/nginx/sites-available/$SUB"
 
+echo "chown'ing newly created subdomain directories"
+sudo chown -R root:www-data /srv/www/$SUB/
+
 echo "Would you like to enable $SUB? (yes or no)"
 
 read enableOpt
