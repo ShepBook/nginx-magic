@@ -19,7 +19,7 @@ echo "#
 # $SUB (/etc/nginx/sites-available/$SUB)
 #
 server {
-    listen    80;
+    listen    8081;
     server_name $SUB;
     access_log /srv/www/$SUB/logs/access.log;
     error_log /srv/www/$SUB/logs/eror.log;
@@ -54,4 +54,4 @@ elif [ $reloadOpt = "no" ]; then
     echo "Please restart nginx when you feel like it then..."
 fi
 
-echo "Enjoy your new domain! Don't forget to setup DNS"
+echo "Enjoy your new domain! Don't forget to setup DNS. Please restart varnish cache too."
